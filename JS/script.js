@@ -76,4 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
     copyIcon.addEventListener("click", copyPassword);
     lengthSlider.addEventListener("input", updateSlider);
     generateBtn.addEventListener("click", generatePassword);
+
+});
+const copyNotification = document.getElementById('copy-notification');
+const copyIcon = document.querySelector('.input-box span');
+
+copyIcon.addEventListener('click', () => {
+    console.log('Copy icon clicked!');
+    // Your existing copying logic here
+    //...
+
+    // Show the notification
+    copyNotification.classList.add('show');
+    console.log('Notification shown!');
+
+    // Hide the notification after 2 seconds
+    setTimeout(() => {
+        copyNotification.classList.remove('show');
+        console.log('Notification hidden!');
+    }, 2000);
 });
